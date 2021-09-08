@@ -12,7 +12,7 @@ export default function Slogan() {
   return (
     <Flex
       bg={useColorModeValue("#F9FAFB", "gray.800")}
-      p={50}
+      p={30}
       w="full"
       alignItems="center"
       justifyContent="center"

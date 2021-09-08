@@ -5,6 +5,7 @@ import { Route } from 'wouter';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
+import Summary from './pages/Summary/Summary';
 
 // 1. Import the extendTheme function
 // 2. Extend the theme to include custom colors, fonts, etc
@@ -35,6 +36,7 @@ function App() {
       <Navbar />
 
       <Route component={Home} path="/" />
+      <Route component={Summary} path="/summary" />
 
       <Footer />
     </ChakraProvider>
