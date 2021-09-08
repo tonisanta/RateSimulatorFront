@@ -33,12 +33,20 @@ const theme = extendTheme({
 function App() {
   return (
     <ChakraProvider theme={theme}>
+            <div className="content-container"> 
+
       <Navbar />
+
+
 
       <Route component={Home} path="/" />
       <Route component={Summary} path="/summary" />
 
-      <Footer />
+      </div>
+      <footer className="footer--pin">
+        <Footer />
+      </footer>
+
     </ChakraProvider>
   );
 }

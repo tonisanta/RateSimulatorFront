@@ -54,13 +54,10 @@ export default function Gslr() {
               <Link to="/">
                 <Button variant="ghost">Home</Button>
               </Link>
-              <Link to="/especies">
-                <Button variant="ghost">Especies</Button>
+              <Link to="/summary">
+                <Button variant="ghost">Resumen</Button>
               </Link>
             </HStack>
-            <Button colorScheme="red" size="sm">
-              Notificar
-            </Button>
             <ColorModeSwitcher justifySelf="flex-end" />
 
             <Box display={{ base: 'inline-flex', md: 'none' }}>
@@ -96,8 +93,8 @@ export default function Gslr() {
                 <Link to="/">
                   <Button variant="ghost">Home</Button>
                 </Link>
-                <Link to="/especies">
-                  <Button variant="ghost">Especies</Button>
+                <Link to="/summary">
+                  <Button variant="ghost">Resumen</Button>
                 </Link>
               </VStack>
             </Box>

@@ -8,7 +8,9 @@ import {
   useDisclosure,
   ButtonGroup,
   Collapse,
+  Heading,
   Stack,
+  Divider
 } from "@chakra-ui/react";
 
 import Slogan from "../../components/Slogan/Slogan";
@@ -16,6 +18,7 @@ import InputPrice from "../../components/InputPrice/InputPrice";
 import usePrices from "../../Hooks/usePrices";
 import axios from "axios";
 import CustomAlert from "../../components/Alert/Alert";
+import useLocation from "wouter/use-location";
 
 
 export default function Home() {
@@ -24,6 +27,7 @@ export default function Home() {
   const inputFiles = useRef(null);
   const inputGroupRef = useRef(null);
   const [errorOnPost, setErrorOnPost] = useState();
+  const [, setLocation] = useLocation();
 
   const sendForm = () => {
     let formData = new FormData();
@@ -38,20 +42,14 @@ export default function Home() {
     formData.append('PricePerKwHValle', getPrice("valle"));
     formData.append('PricePerKwH', getPrice("sinPeriodo"));
 
-    /*
-    for (var key of formData.entries()) {
-      console.log(key[0] + ', ' + key[1]);
-    }
-    */
-
     const axiosInst = axios.create({
       baseURL: 'https://localhost:5001/api/Rate'
     });
     axiosInst
       .post('',formData)
       .then(function (response) {
-        console.log(response.data); 
         localStorage.setItem('summary', JSON.stringify(response.data))        
+        setLocation("/summary")
       })
       .catch(function (error) {
         setErrorOnPost(error.message)
@@ -121,6 +119,13 @@ export default function Home() {
             {displayPrices()}
         </Collapse>
       </Container>
+
+
+
+      <Center mt={10}>
+
+        <Heading>Instrucciones</Heading>
+      </Center>
     </>
   );
 }

@@ -15,7 +15,7 @@ export default function Summary() {
     let breakdown = summary["oneLuz3Periodos"]["consumptionBreakdown"];    
 
     let messageOneLuz = `OneLuz (mismo precio todas las horas): ${summary["oneLuz"].cost.toFixed(2)}€`;
-    let messageOne3Periodos = `One3Periodos (precio según franja horaria): ${summary["oneLuz3Periodos"].cost.toFixed(2)}€`;    
+    let messageOne3Periodos = `OneLuz3Periodos (precio según franja horaria): ${summary["oneLuz3Periodos"].cost.toFixed(2)}€`;    
     
   return (
     <>
