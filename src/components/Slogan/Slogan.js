@@ -86,6 +86,8 @@ export default function Slogan() {
               _hover={{
                 bg: "brand.50",
               }}
+              href="https://github.com/tonisanta/RateSimulatorBackend"
+              isExternal
             >
               Learn More
             </Link>

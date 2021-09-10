@@ -7,7 +7,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
   
   const SocialButton = ({ children, label, href }) => {
     return (
@@ -19,6 +19,7 @@ import {
         cursor={'pointer'}
         as={'a'}
         href={href}
+        target="_blank"
         display={'inline-flex'}
         alignItems={'center'}
         justifyContent={'center'}
@@ -38,6 +39,7 @@ import {
       <Box
         bg={useColorModeValue('gray.50', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}
+        mb={4}
       >
         <Container
           as={Stack}
@@ -49,15 +51,15 @@ import {
           align={{ base: 'center', md: 'center' }}
           alignItems="center"
         >
-          <Text>JellyFind 2021 ©</Text>
+          <Text>Rate Simulator 2021 ©</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
-              <FaTwitter />
+            <SocialButton label={'LinkedIn'} href={'https://linkedin.com/in/toni-santandreu-sureda-87137b207'}>
+              <FaLinkedin />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
+            <SocialButton label={'Github'}  href={'https://github.com/tonisanta'}>
+              <FaGithub />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
+            <SocialButton label={'Instagram'} href={'https://www.instagram.com/tonisanta/'}>
               <FaInstagram />
             </SocialButton>
           </Stack>

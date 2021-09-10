@@ -8,9 +8,7 @@ import {
   useDisclosure,
   ButtonGroup,
   Collapse,
-  Heading,
-  Stack,
-  Divider
+  Stack
 } from "@chakra-ui/react";
 
 import Slogan from "../../components/Slogan/Slogan";
@@ -19,6 +17,7 @@ import usePrices from "../../Hooks/usePrices";
 import axios from "axios";
 import CustomAlert from "../../components/Alert/Alert";
 import useLocation from "wouter/use-location";
+import Instructions from "../../components/Instructions/Instructions";
 
 
 export default function Home() {
@@ -102,7 +101,7 @@ export default function Home() {
       <Slogan />
       {errorOnPost ? <CustomAlert message={errorOnPost}/> : React.Fragment }
       {error ? <CustomAlert message={error.message}/> : React.Fragment }
-      <Container id="containerForm" textAlign="center">
+      <Container id="containerForm" textAlign="center" p={7}>
         <input id="files" ref={inputFiles} type="file" multiple accept=".csv" />
 
         <ButtonGroup
@@ -119,13 +118,8 @@ export default function Home() {
             {displayPrices()}
         </Collapse>
       </Container>
-
-
-
-      <Center mt={10}>
-
-        <Heading>Instrucciones</Heading>
-      </Center>
+      
+      <Instructions/>  
     </>
   );
 }
