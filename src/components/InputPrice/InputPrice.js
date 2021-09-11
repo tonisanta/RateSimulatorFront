@@ -11,7 +11,7 @@ export default function InputPrice({ name, price }) {
       <InputLeftAddon children={name} />
       <Input
         type="number"
-        placeholder="phone number"
+        placeholder={`Precio ${name}`}
         step="any"
         lang="es"
         inputMode="decimal"

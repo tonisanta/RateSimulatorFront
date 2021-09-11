@@ -36,10 +36,25 @@ export default function Home() {
       formData.append('files', files[i])      
     }
 
-    formData.append('PricePerKwHPunta', getPrice("punta"));
-    formData.append('PricePerKwHLlano', getPrice("llano"));
-    formData.append('PricePerKwHValle', getPrice("valle"));
-    formData.append('PricePerKwH', getPrice("sinPeriodo"));
+    let pricePunta =  getPrice("punta");
+    if (pricePunta) {
+      formData.append('PricePerKwHPunta', pricePunta);
+    }
+
+    let priceLlano =  getPrice("llano");
+    if (priceLlano) {
+      formData.append('PricePerKwHLlano', priceLlano);
+    }
+
+    let priceValle =  getPrice("valle");
+    if (priceValle) {
+      formData.append('PricePerKwHValle', priceValle);
+    }    
+
+    let priceSinPeriodo =  getPrice("sinPeriodo");
+    if (priceSinPeriodo) {
+      formData.append('PricePerKwH', priceSinPeriodo);
+    }
 
     const axiosInst = axios.create({
       baseURL: 'https://rate-simulator.azurewebsites.net/api/Rate'
