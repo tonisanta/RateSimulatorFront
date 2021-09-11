@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export default function priceService() {
   const axiosInst = axios.create({
-    baseURL: 'https://localhost:5001/api/Rate'
+    baseURL: 'https://rate-simulator.azurewebsites.net/api/Rate'
   });
   return axiosInst
     .get()

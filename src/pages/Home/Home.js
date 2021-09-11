@@ -42,7 +42,7 @@ export default function Home() {
     formData.append('PricePerKwH', getPrice("sinPeriodo"));
 
     const axiosInst = axios.create({
-      baseURL: 'https://localhost:5001/api/Rate'
+      baseURL: 'https://rate-simulator.azurewebsites.net/api/Rate'
     });
     axiosInst
       .post('',formData)
