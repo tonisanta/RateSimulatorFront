@@ -57,7 +57,7 @@ export default function Home() {
     }
 
     const axiosInst = axios.create({
-      baseURL: 'https://rate-simulator.azurewebsites.net/api/Rate'
+      baseURL: 'http://toni.westeurope.cloudapp.azure.com/api/Rate'
     });
     axiosInst
       .post('',formData)
