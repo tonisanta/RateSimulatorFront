@@ -57,7 +57,7 @@ export default function Home() {
     }
 
     const axiosInst = axios.create({
-      baseURL: 'http://toni.westeurope.cloudapp.azure.com/api/Rate'
+      baseURL: 'http://localhost/api/Rate'
     });
     axiosInst
       .post('',formData)

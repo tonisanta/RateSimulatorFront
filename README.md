@@ -1,3 +1,13 @@
+# Rate simulator
+
+This app was developed with React and Chakra UI components. Provides the minimum funcitonality to interact with the API and analyse your consumption files.
+
+## Images
+[Home](images/home.png)
+[Home footer](images/home-2.png)
+[Summary](images/summary.png)
+[Dark Summary](images/dark-summary.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
